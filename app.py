@@ -9,6 +9,7 @@ camera = cv2.VideoCapture(0)  # use 0 for web camera
 status = "on"
 """This variable defines how the page will load"""
 
+
 def gen_frames():  # generate frame by frame from camera
     while True:
         # Capture frame-by-frame

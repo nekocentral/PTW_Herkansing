@@ -1,12 +1,13 @@
 from flask import Flask, render_template, Response, jsonify
 import cv2
+import json
 
 app = Flask(__name__)
 
 camera = cv2.VideoCapture(0)  # use 0 for web camera
 """In this variable the camera that gets used by CV2 gets defined"""
 
-status = "on"
+status = 1
 """This variable defines how the page will load"""
 
 
@@ -32,8 +33,12 @@ def video_feed():
 
 @app.route('/status')
 def status():
-    """Returns an JSON response that contains the content of the Status Variable"""
-    return jsonify(status)
+    """Returns an JSON response that contains the content of the data Dict"""
+    data = {'status': status}
+    response = app.response_class(response=json.dumps(data),
+                                  status=200,
+                                  mimetype='application/json')
+    return response()
 
 
 @app.route('/')

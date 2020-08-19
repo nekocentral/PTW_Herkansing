@@ -1,4 +1,4 @@
-## Live Streaming with Flask, Open-CV and Raspberry Pi GPIO
+## Room monitoring with Flask, Open-CV and Raspberry Pi GPIO
 ```python
 pip3 install -r requirements.txt
 ```

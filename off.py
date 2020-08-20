@@ -1,12 +1,13 @@
 from flask import Flask, render_template, Response, jsonify
+from flask_cors import CORS
 import cv2
 
 app = Flask(__name__)
-
+CORS(app)
 camera = cv2.VideoCapture(0)  # use 0 for web camera
 """In this variable the camera that gets used by CV2 gets defined"""
 
-cam_status = "1"
+cam_status = "camoff"
 room="1"
 """This variable defines how the page will load"""
 

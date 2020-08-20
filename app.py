@@ -34,7 +34,7 @@ def video_feed():
 @app.route('/status')
 def status():
     """Returns an JSON response that contains the content of the data Dict"""
-    data = {'room': room,'status': cam_status}
+    data = {'room': room,'cam_status': cam_status}
     return jsonify(data)
 
 

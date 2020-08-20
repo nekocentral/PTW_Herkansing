@@ -23,12 +23,6 @@ def gen_frames():  # generate frame by frame from camera
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
 
 
-@app.route('/video_feed')
-def video_feed():
-    """Video streaming route. Put this in the src attribute of an img tag."""
-    return Response(gen_frames(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
-
 
 @app.route('/status')
 def status():
@@ -40,7 +34,7 @@ def status():
 @app.route('/')
 def index():
     """Home page for the Video Page"""
-    return render_template('index.html', kamer_nummer="1")
+    return render_template('index.html', kamer_nummer="off")
 
 
 if __name__ == '__main__':

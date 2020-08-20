@@ -6,7 +6,7 @@ app = Flask(__name__)
 camera = cv2.VideoCapture(0)  # use 0 for web camera
 """In this variable the camera that gets used by CV2 gets defined"""
 
-cam_status = "1"
+cam_status = "2"
 """This variable defines how the page will load"""
 
 
@@ -40,7 +40,7 @@ def status():
 @app.route('/')
 def index():
     """Home page for the Video Page"""
-    return render_template('index.html', kamer_nummer="1")
+    return render_template('index.html', kamer_nummer="sos")
 
 
 if __name__ == '__main__':

@@ -7,6 +7,7 @@ camera = cv2.VideoCapture(0)  # use 0 for web camera
 """In this variable the camera that gets used by CV2 gets defined"""
 
 cam_status = "1"
+room="1"
 """This variable defines how the page will load"""
 
 
@@ -27,7 +28,7 @@ def gen_frames():  # generate frame by frame from camera
 @app.route('/status')
 def status():
     """Returns an JSON response that contains the content of the data Dict"""
-    data = {'status': cam_status}
+    data = {'room': room,'status': cam_status}
     return jsonify(data)
 
 

@@ -1,6 +1,7 @@
 ## Room monitoring with Flask, Open-CV and Raspberry Pi GPIO
 ```python
 pip3 install -r requirements.txt
+sudo apt-get install libopencv-dev python3-opencv
 ```
 ### Run Server
 ```python

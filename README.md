@@ -5,7 +5,7 @@ sudo apt-get install libopencv-dev python3-opencv
 ```
 ### Run Server
 ```python
-python3 app.py
+python3 main.py
 ```
 ### GPIO Used
 GPIO 13 will trigger SOS status  

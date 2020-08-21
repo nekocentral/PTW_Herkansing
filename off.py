@@ -36,8 +36,8 @@ def status():
 @app.route('/')
 def index():
     """Home page for the Video Page"""
-    return render_template('index.html', kamer_nummer="off")
+    return render_template('index.html', kamer_nummer=room + " off")
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0')
